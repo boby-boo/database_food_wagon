@@ -5,11 +5,6 @@ const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 
-server.use(
-    jsonServer.rewriter({
-        'db.json': '/$1',
-    }),
-);
 server.use(router);
 server.listen(3001, () => {
     console.log('JSON Server is running');
